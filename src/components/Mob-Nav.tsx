@@ -48,7 +48,7 @@ function MobNav() {
                             Home
                         </p>
                     </Link>
-                    <Link href="/List" passHref>
+                    <Link href="/products" passHref>
                         <p
                             className="text-[#726E8D] hover:text-gray-200 text-1xl"
                             onClick={handleOptionClick}
@@ -56,12 +56,12 @@ function MobNav() {
                             Products
                         </p>
                     </Link>
-                    <Link href="/Contact" passHref>
+                    <Link href="/about" passHref>
                         <p
                             className="text-[#726E8D] hover:text-gray-200 text-1xl"
                             onClick={handleOptionClick}
                         >
-                            Contact Us
+                            About Us
                         </p>
                     </Link>
 

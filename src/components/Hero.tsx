@@ -1,40 +1,35 @@
-import Link from "next/link";
 import Image from "next/image";
-import hero from "../../public/hero.jpeg";
+import hero from "../../public/hero.png";
 
-function Hero(){
-    return (
-        <div className="flex items-center justify-between mt-10  bg-white text-slate-700 mr-5 ml-5 rounded-lg w-[90%] max-w-6xl mx-auto  overflow-hidden">
+function Hero() {
+  return (
+    <main className="mx-auto max-w-[1440px] flex flex-col lg:flex-row h-auto lg:h-[700px]">
+      {/* Left Section: Text Content */}
+      <div className="flex-1 bg-[#2A254B] text-white p-6 sm:p-10 lg:p-12 flex flex-col justify-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.4] mb-6">
+          The furniture brand for the future, with timeless designs
+        </h2>
+        <button className="bg-[#36305c] text-white text-sm w-[120px] h-[40px] rounded-md hover:bg-[#4a3e74] transition">
+          View collection
+        </button>
+        <p className="leading-[1.6] text-sm sm:text-base lg:text-lg mt-12">
+          A new era in eco-friendly furniture with Avelon, the French luxury
+          retail brand with nice fonts, tasteful colors, and a beautiful way to
+          display things digitally using modern web technologies.
+        </p>
+      </div>
 
-            <div className="w-3/4 p-2">
-                <h1 className="text-[#2A254B]  font-serif text-xl mt-10 md:text-3xl font-semibold mb-4">
-                    The furniture brand for the future, with timeless designs
-                </h1>
-
-                <Link href="/List">
-                    <button className="bg-[#2A254B] mt-10 text-white px-6 py-2 rounded">
-                        View Collection
-                    </button>
-                </Link>
-                <p className="text-1xl sm:text-sm md:text-sm lg:text-1xl  mt-20 mb-2">
-                    A new era in eco-friendly furniture with Avelon, the French luxury
-                    retail brand. Stylish fonts, tasteful colors, and modern web
-                    technologies for a beautiful display.
-                </p>
-
-            </div>
-
-
-            <div className="hidden md:block  w-1/2 ">
-                <Image
-                    src={hero}
-                    alt="Furniture Chair"
-                    className="h-[400px] w-full object-cover mt-5"
-                />
-            </div>
-        </div>
-
-    );
-};
+      {/* Right Section: Image (Hidden on Small Screens) */}
+      <div className="hidden lg:block flex-1">
+        <Image
+          src={hero}
+          alt="chair picture"
+          className="w-full h-full object-cover"
+          priority
+        />
+      </div>
+    </main>
+  );
+}
 
 export default Hero;

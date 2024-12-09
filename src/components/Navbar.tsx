@@ -18,7 +18,7 @@ function Navbar(){
      
        <div className='flex gap-2 mr-30'>
           
-      <Link href="/Cart"> <FiShoppingCart className="w-6 h-6 text-[#726E8D]" /></Link>
+      <Link href="/cart"> <FiShoppingCart className="w-6 h-6 text-[#726E8D]" /></Link>
       <Link href="/"> <IoPersonCircleOutline className="w-6 h-6 text-[#726E8D]" /></Link>
       
        </div>
@@ -27,8 +27,8 @@ function Navbar(){
         
         <div className="hidden lg:flex w-full h-18  justify-center space-x-10 items-center px-3 py-2 shadow-md border border-gray-300 bg-white">
         <Link href="/" className="text-[#726E8D]  hover:underline">Home</Link>
-        <Link href="/List" className="text-[#726E8D]  hover:underline">Products</Link>
-        <Link href="/Contact" className="text-[#726E8D]  hover:underline">Contact Us</Link>
+        <Link href="/products" className="text-[#726E8D]  hover:underline">Products</Link>
+        <Link href="/about" className="text-[#726E8D]  hover:underline">About Us</Link>
      
      </div>
    

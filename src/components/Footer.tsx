@@ -1,151 +1,80 @@
-
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
+import { FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io";
+import { ImSkype } from "react-icons/im";
+import { AiOutlineTwitter } from "react-icons/ai";
 import { RiPinterestFill } from "react-icons/ri";
 
-export default function Footer() {
-    return (
-        <footer className="bg-[#2A254B] text-white py-10">
-            <div className="container mx-auto grid grid-cols-2  md:grid-cols-5 gap-8 px-4">
+function Footer() {
+  return (
+    <footer className="mx-auto max-w-[1440px] bg-[#2A254B] px-4 sm:px-8 pt-1">
+      <div className="box-container flex flex-wrap justify-between mt-[58px]">
+        {/* Menu Section */}
+        <div className="box w-full sm:w-auto mb-6 sm:mb-0">
+          <h3 className="font-normal text-[16px] text-[#fff] mb-[12px]">Menu</h3>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>New arrivals</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Best sellers</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Recently viewed</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Popular this week</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>All products</Link>
+        </div>
 
-                <div>
-                    <h4 className="font-bold text-2xl sm:text-0.5xl mb-4">Avion</h4>
-                    <p className="mb-4 text-sm">Get 10% off your first order</p>
-                    <form className="flex items-center">
-                        <input
-                            type="email"
-                            placeholder="Enter your email"
-                            className="p-2 w-28 h-10 text-sm text-black rounded-l-md focus:outline-none"
-                        />
-                        <button
-                            type="submit"
-                            className="bg-[#726E8D] p-2"
-                        >
-                            &#9658;
-                        </button>
-                    </form>
-                </div>
+        {/* Categories Section */}
+        <div className="box w-full sm:w-auto mb-6 sm:mb-0">
+          <h3 className="font-normal text-[16px] text-[#fff] mb-[12px]">Categories</h3>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Crockery</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Furniture</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Homeware</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Plant pots</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Chairs</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Crockery</Link>
+        </div>
 
+        {/* Our company Section */}
+        <div className="box w-full sm:w-auto mb-6 sm:mb-0">
+          <h3 className="font-normal text-[16px] text-[#fff] mb-[12px]">Our company</h3>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>About us</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Vacancies</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Contact us</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Privacy</Link>
+          <Link className="text-[#fff] text-[14px] block pb-[7px]" href={"/"}>Return policy</Link>
+        </div>
 
-                <div>
-                    <h4 className="font-bold text-1xl mb-4">Avion</h4>
-                    <p className="text-sm">21 New York Street</p>
-                    <p>New York City</p>
-                    <p className="mt-4">United States of America</p>
-                    <p>432 34</p>
-                    {/* Link */}
-                    <div className="flex space-x-4 mt-2">
-                        <a href="/">
-                            <FaFacebook className="text-2xl cursor-pointer" />
-                        </a>
-                        <a href="/">
-                            <RiPinterestFill className="text-2xl cursor-pointer" />
-                        </a>
-                        <a href="/">
-                            <FaInstagram className="text-2xl cursor-pointer" />
-                        </a>
-                    </div>
-                </div>
+        {/* Join our mailing list Section */}
+        <div className="box w-full sm:w-auto mb-6 sm:mb-0">
+          <h3 className="font-normal text-[16px] text-[#fff] mb-[12px]">Join our mailing list</h3>
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            className="bg-[#22202E] text-[#fff] w-full sm:w-[509px] h-[56px] mb-4"
+          />
+          <button className="w-full sm:w-[118px] h-[56px] text-[#2A254B] bg-[#fff] mb-4 sm:mb-0">
+            Sign up
+          </button>
+        </div>
+      </div>
 
+      {/* Horizontal Line */}
+      <div className="bg-[#4E4D93] w-full h-[1px] mt-[48px]" />
 
-                <div>
-                    <h4 className="font-bold text-1xl mb-4">Menu</h4>
-                    <ul className="text-sm">
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                New Arrival
-                            </a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                Best Seller
-                            </a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                Recently viewed
-                            </a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="" className="hover:underline">
-                                Popular this week
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" className="hover:underline">
-                                All Products
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+      {/* Footer Bottom Section */}
+      <div className="mt-2 flex flex-col sm:flex-row justify-between items-center">
+        <p className="text-[#fff] text-[14px] leading-[18.9px] mb-4 sm:mb-0">
+          Copyright 2022 Avion LTD
+        </p>
+        <div className="flex gap-x-6">
+          <Link className="text-[#fff]" href={"/"}><FaLinkedin /></Link>
+          <Link className="text-[#fff]" href={"/"}><FaFacebookSquare /></Link>
+          <Link className="text-[#fff]" href={"/"}><IoLogoInstagram /></Link>
+          <Link className="text-[#fff]" href={"/"}><ImSkype /></Link>
+          <Link className="text-[#fff]" href={"/"}><AiOutlineTwitter /></Link>
+          <Link className="text-[#fff]" href={"/"}><RiPinterestFill /></Link>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-                <div>
-                    <h4 className="font-bold text-1xl mb-4">Categories</h4>
-                    <ul className="text-sm">
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                Crockery
-                            </a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                Furniture
-                            </a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                Home Work
-                            </a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                Plant Pots
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/" className="hover:underline">
-                                Chairs
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="font-bold text-1xl mb-4">Our company</h4>
-                    <ul className="text-sm">
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                About us
-                            </a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                Vacancies
-                            </a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="/" className="hover:underline">
-                                Contact us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/" className="hover:underline">
-                                Privacy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/" className="hover:underline">
-                                Return Policy
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-
-
-            </div>
-            <div className="border-t border-gray-700 mt-8 pt-4 text-center text-lg">
-                <p className="text-gray-400">© Copyright 2022.LTD</p>
-            </div>
-        </footer>
-    );
-}
+export default Footer;
