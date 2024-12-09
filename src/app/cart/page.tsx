@@ -56,8 +56,8 @@ const Cart = () => {
                         />
                         <div className="flex-1">
                             <h2 className="text-lg font-bold">{product.name}</h2>
-                            <p className="text-gray-600">{product.description}</p>
-                            <p className="text-gray-800 font-semibold">Price: ${product.price}</p>
+                            <p className="text-[#2A254B]">{product.description}</p>
+                            <p className="text-[#2A254B] font-semibold">Price: ${product.price}</p>
                         </div>
                         <div>
                             <input
@@ -67,20 +67,20 @@ const Cart = () => {
                                 onChange={(e) => updateQuantity(product.id, +e.target.value)}
                                 className="border text-black rounded w-16 text-center"
                             />
-                            <p className="text-gray-800 font-semibold">
+                            <p className="text-[#2A254B] font-semibold">
                                 Total: ${product.price * product.quantity}
                             </p>
                         </div>
                     </div>
                 ))}
             </div>
-            <div className="mt-6 p-4 border-t text-slate-800">
+            <div className="mt-6 p-4 border-t text-[#2A254B]">
                 <p className="text-right text-lg font-bold">Subtotal: ${subTotal}</p>
                 <p className="text-right text-sm text-gray-500">
                     Taxes and shipping are calculated at checkout.
                 </p>
                 <Link href="/List">
-                    <button className="mt-4 bg-slate-800  text-white py-2 px-4 rounded">
+                    <button className="mt-4 bg-[#2A254B]  text-white py-2 px-4 rounded">
                         Go to Checkout
                     </button>
                 </Link>
