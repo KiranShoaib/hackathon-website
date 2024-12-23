@@ -78,7 +78,7 @@ function Ceramics() {
       </div>
 
       {/* Button */}
-      <div className="text-center mt-10">
+      <div className="text-center my-10">
         <button className="w-[170px] h-[48px] text-[#2A254B] bg-[#F9F9F9] ">
           View Collection
         </button>

@@ -56,6 +56,14 @@ function MobNav() {
                             Products
                         </p>
                     </Link>
+                    <Link href="/productslisting" passHref>
+                        <p
+                            className="text-[#726E8D] hover:text-gray-200 text-1xl"
+                            onClick={handleOptionClick}
+                        >
+                            ProductsListing
+                        </p>
+                    </Link>
                     <Link href="/about" passHref>
                         <p
                             className="text-[#726E8D] hover:text-gray-200 text-1xl"

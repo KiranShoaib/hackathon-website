@@ -28,6 +28,7 @@ function Navbar(){
         <div className="hidden lg:flex w-full h-18  justify-center space-x-10 items-center px-3 py-2 shadow-md border border-gray-300 bg-white">
         <Link href="/" className="text-[#726E8D]  hover:underline">Home</Link>
         <Link href="/products" className="text-[#726E8D]  hover:underline">Products</Link>
+        <Link href="/productslisting" className="text-[#726E8D]  hover:underline">ProductsListing</Link>
         <Link href="/about" className="text-[#726E8D]  hover:underline">About Us</Link>
      
      </div>

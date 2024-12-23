@@ -1,15 +1,12 @@
-import ProductHero from "@/components/Product-Hero";
-import Like from "@/components/Like";
-import Brand from "@/components/Brand";
-import SignUp from "@/components/Sign-up";
+import ProductHeader from "@/components/Product-Header";
+import ProductItems from "@/components/Product-Items";
 
 function Products(){
-    return(
+    return (
         <div>
-            <ProductHero/>
-            <Like/>
-            <Brand/>
-            <SignUp/>
+            <ProductHeader/>
+            <ProductItems/>
+
         </div>
     )
 }
