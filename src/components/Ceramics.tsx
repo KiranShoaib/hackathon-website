@@ -1,10 +1,19 @@
+"use client";
 import Image from "next/image";
 import ceramics1 from "../../public/ceramics1.png";
 import ceramics2 from "../../public/ceramics2.png";
 import ceramics3 from "../../public/ceramics3.png";
 import ceramics4 from "../../public/ceramics4.png";
+import { useRouter } from "next/navigation";
+
 
 function Ceramics() {
+
+  const router = useRouter();
+  const handleViewCollection = (name:string) => {
+    router.push(name);
+  }
+
   return (
     <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
       {/* Header */}
@@ -79,7 +88,7 @@ function Ceramics() {
 
       {/* Button */}
       <div className="text-center my-10">
-        <button className="w-[170px] h-[48px] text-[#2A254B] bg-[#F9F9F9] ">
+        <button className="w-[170px] h-[48px] text-[#2A254B] bg-[#F9F9F9]" onClick={() => handleViewCollection('/products')}>
           View Collection
         </button>
       </div>

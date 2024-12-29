@@ -1,10 +1,19 @@
+"use client";
 import Image from "next/image";
 import list1 from "../../public/list1.png";
 import list2 from "../../public/list2.png";
 import list3 from "../../public/list3.png";
+import { useRouter } from "next/navigation";
+
 
 
 function List() {
+
+  const router = useRouter();
+  const handleViewCollection = (name:string) => {
+    router.push(name);
+  }
+
     return(
         <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
         {/* Header */}
@@ -65,7 +74,7 @@ function List() {
   
         {/* Button */}
         <div className="text-center my-10">
-          <button className="w-[170px] h-[48px] text-[#2A254B] bg-[#F9F9F9] ">
+          <button className="w-[170px] h-[48px] text-[#2A254B] bg-[#F9F9F9]" onClick={() => handleViewCollection('/products')}>
             View Collection
           </button>
         </div>

@@ -1,7 +1,15 @@
+"use client";
 import Image from "next/image";
 import hero from "../../public/hero.png";
+import { useRouter } from "next/navigation";
 
 function Hero() {
+  
+  const router = useRouter();
+  const handleViewCollection = (name:string) => {
+    router.push(name);
+  } 
+
   return (
     <main className="mx-auto max-w-[1440px] flex flex-col lg:flex-row h-auto lg:h-[700px]">
       {/* Left Section: Text Content */}
@@ -9,7 +17,7 @@ function Hero() {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.4] mb-6">
           The furniture brand for the future, with timeless designs
         </h2>
-        <button className="bg-[#36305c] text-white text-sm w-[120px] h-[40px] rounded-md hover:bg-[#4a3e74] transition">
+        <button className="bg-[#36305c] text-white text-sm w-[120px] h-[40px] rounded-md hover:bg-[#4a3e74] transition" onClick={() => handleViewCollection('/products')}>
           View collection
         </button>
         <p className="leading-[1.6] text-sm sm:text-base lg:text-lg mt-12">
