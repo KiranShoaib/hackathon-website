@@ -6,6 +6,7 @@ function Products(){
         <div>
             <ProductHeader/>
             <ProductItems/>
+            
 
         </div>
     )
