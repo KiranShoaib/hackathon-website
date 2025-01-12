@@ -16,7 +16,7 @@ function MobNav() {
     };
 
     return (
-        <div className="lg:hidden bg-white shadow-md relative">
+        <div className="max-w-[1440px] mx-auto lg:hidden bg-white shadow-md relative">
 
             <div className="flex justify-between  items-center px-4 py-3">
 
@@ -54,14 +54,6 @@ function MobNav() {
                             onClick={handleOptionClick}
                         >
                             Products
-                        </p>
-                    </Link>
-                    <Link href="/productslisting" passHref>
-                        <p
-                            className="text-[#726E8D] hover:text-gray-200 text-1xl"
-                            onClick={handleOptionClick}
-                        >
-                            ProductsListing
                         </p>
                     </Link>
                     <Link href="/about" passHref>

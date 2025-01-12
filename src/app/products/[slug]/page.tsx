@@ -1,10 +1,38 @@
 "use client"
 import Image from "next/image";
 import { useState } from "react";
+import Like from "@/components/Like";
+import Brand from "@/components/Brand";
+import SignUp from "@/components/Sign-up";
 
-function ProductHero() {
+function DynamicPage({params}: {params: {slug: string}}) {
+
     const [quantity, setQuantity] = useState(1);
     const [isFavorite, setIsFavorite] = useState(false);
+
+    const product = [
+        { slug: "1", src: "/productpage1.png", alt: "product", title: "The Dandy chair", price: "£250" },
+        { slug: "2", src: "/productpage2.png", alt: "product", title: "Rustic Vase Set", price: "£155" },
+        { slug: "3", src: "/productpage3.png", alt: "product", title: "The Silky Vase", price: "£125" },
+        { slug: "4", src: "/productpage4.png", alt: "product", title: "The Lucy Lamp", price: "£399" },
+        { slug: "5", src: "/productpage5.png", alt: "product", title: "The Dandy chair", price: "£250" },
+        { slug: "6", src: "/productpage6.png", alt: "product", title: "Rustic Vase Set", price: "£155" },
+        { slug: "7", src: "/productpage7.png", alt: "product", title: "The Silky Vase", price: "£125" },
+        { slug: "8", src: "/productpage8.png", alt: "product", title: "The Lucy Lamp", price: "£399" },
+        { slug: "9", src: "/productpage1.png", alt: "product", title: "The Dandy chair", price: "£250" },
+        { slug: "10", src: "/productpage2.png", alt: "product", title: "Rustic Vase Set", price: "£155" },
+        { slug: "11", src: "/productpage3.png", alt: "product", title: "The Silky Vase", price: "£125" },
+        { slug: "12", src: "/productpage4.png", alt: "product", title: "The Lucy Lamp", price: "£399" },
+      ];
+
+     // Find the product based on slug
+  const data = product.find((item) => item.slug === params.slug);
+  
+
+  // If product not found, show error or fallback UI
+  if (!data) {
+    return <div>Product not found!</div>;
+  }
 
     const handleFavorite = () => {
         setIsFavorite(!isFavorite);
@@ -17,8 +45,8 @@ function ProductHero() {
                     {/* Image Section */}
                     <div className="flex justify-center items-stretch">
                         <Image
-                            src="/producthero.png"
-                            alt="The Dandy Chair"
+                            src={data.src}
+                            alt={data.title}
                             width={500}   
                             height={500}
                             className="w-full h-full object-cover"
@@ -27,8 +55,8 @@ function ProductHero() {
 
                     {/* Content Section */}
                     <div className="p-5 flex flex-col justify-between">
-                        <h1 className="text-[#2A254B] text-3xl font-serif  font-bold mt-8 mb-8">Rustic Vase Set</h1>
-                        <p className="text-lg text-gray-600">$960</p>
+                        <h1 className="text-[#2A254B] text-3xl font-serif  font-bold mt-8 mb-8">{data.title}</h1>
+                        <p className="text-lg text-gray-600">{data.price}</p>
                         <p className="mt-4 text-gray-700 text-sm">
                             A timeless ceramic vase with a tri-color grey glaze...
                         </p>
@@ -82,8 +110,11 @@ function ProductHero() {
                     </div>
                 </div>
             </div>
+            <Like/>
+            <Brand/>
+            <SignUp/>
         </div>
     );
 }
 
-export default ProductHero;
+export default DynamicPage;

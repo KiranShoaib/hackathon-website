@@ -1,5 +1,5 @@
 import ProductHeader from "@/components/Product-Header";
-import ProductItems from "@/components/Product-Items";
+import ProductItems from "@/components/Product-items";
 
 function Products(){
     return (

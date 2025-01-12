@@ -6,7 +6,7 @@ import { LuSprout } from "react-icons/lu"
 function Brand() {
     return (
 
-        <div className="p-10 bg-white flex flex-col">
+        <div className="max-w-[1440px] mx-auto p-10 bg-white flex flex-col">
             <h2 className="text-[#2A254B]  text-3xl mb-10 font-serif  mt-10 text-center">What makes our brand different</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
